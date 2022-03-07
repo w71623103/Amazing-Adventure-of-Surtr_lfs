@@ -34,5 +34,6 @@ public class EnemyModel
     public EGStateDead gStateDead = new EGStateDead();
 
     public float hitForce;
-
+    public float attackRange = 0.3f;
+    public float attacRayHeightModifier = 0f;
 }

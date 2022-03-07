@@ -12,7 +12,7 @@ public class PlayerDashStateDash : PlayerDashStateBase
     public override void EnterState(PlayerCore pl)
     {
         frameCounter = 0f;
-        targetPosVect = new Vector3(pl.transform.position.x + pl.transform.localScale.x * 0.6f, pl.transform.position.y, pl.transform.position.z);
+        targetPosVect = new Vector3(pl.transform.position.x + pl.transform.localScale.x * 0.9f, pl.transform.position.y, pl.transform.position.z);
         //pl.model.isVulnerable = false;
         pl.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         //pl.model.playerRB.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;

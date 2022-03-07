@@ -11,7 +11,8 @@ public class moveToNextScene : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerCore>().model.respawnPos = new Vector3(1f, 0.0850000009f, 0);
+            if (nextSceneName == "second") collision.GetComponent<PlayerCore>().model.respawnPos = new Vector3(1f, 0.0850000009f, 0);
+            else if (nextSceneName == "final") collision.GetComponent<PlayerCore>().model.respawnPos = new Vector3(-0.129999995f, 2.49000001f, 0);
             SceneManager.LoadScene(nextSceneName);
         }
            

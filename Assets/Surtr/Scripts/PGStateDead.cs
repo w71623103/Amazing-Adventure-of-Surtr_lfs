@@ -10,8 +10,14 @@ public class PGStateDead : PlayerGeneralStateBase
     [SerializeField] private float maxFrameNum = 0.333f;*/
     public override void EnterState(PlayerCore pl) 
     {
+        //SceneManager.LoadSceneAsync("temp1");
+        pl.transform.position = pl.GetComponent<PlayerCore>().model.respawnPos;
         pl.model.hp = pl.model.maxhp;
-        SceneManager.LoadScene("temp1");
+        pl.model.healNum = 3;
+        for(int i = 0; i < pl.model.healUI.Length; i++)
+        {
+            pl.model.healUI[i].SetActive(true);
+        }
         pl.ChangeGeneralState(pl.model.gStateDefault);
         /*frameCounter = maxFrameNum; ;
         //pl.model.playerAnim.SetBool(pl.model.isDeadHash, true);
