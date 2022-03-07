@@ -104,7 +104,7 @@ public class PlayerCore : MonoBehaviour
         //if so, reset them to false.
         if (excludeFull(0))
         {
-            for (int i = 0; i < 4; ++i)
+            for (int i = 0; i < 3; ++i)
             {
                 model.attackSoundExclude[i] = false;
             }
@@ -162,7 +162,8 @@ public class PlayerCore : MonoBehaviour
             else
                 transform.localScale = new Vector3(scale.x > 0 || model.horizontalMovement == 0 ? scale.x : -scale.x, scale.y, scale.z);
         }
-        
+
+        controller.healUIUpdate();
     }
 
     //Rigidbody action goes to fixedUpdate
@@ -177,7 +178,7 @@ public class PlayerCore : MonoBehaviour
 
     public float getHpPer()
     {
-        return model.hp <= 0? 0.1f : model.hp / model.maxhp;
+        return model.hp <= 0? 0.001f : model.hp / model.maxhp;
     }
 
     public void takeDamage(float dmg, float x)

@@ -24,8 +24,7 @@ public class EAStateCD : EnemyAttackStateBase
     {
         if (frameCounter <= 0f)
         {
-            if (em.model.attackCondition) em.ChangeAttackState(em.model.atkStateA);
-            else em.ChangeAttackState(em.model.atkStateDefault);
+            em.ChangeAttackState(em.model.atkStateDefault);
         }
 
         //Change hit box according to frameCount;

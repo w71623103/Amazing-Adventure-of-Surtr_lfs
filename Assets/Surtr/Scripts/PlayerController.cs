@@ -83,4 +83,17 @@ public class PlayerController
             
         }
     }
+
+    public void healUIUpdate()
+    {
+        for (int i = 0; i < model.healNum; i++)
+        {
+            model.healUI[i].SetActive(true);
+        }
+
+        for (int i = model.healUI.Length-1; i > model.healNum-1; --i)
+        {
+            model.healUI[i].SetActive(false);
+        }
+    }
 }

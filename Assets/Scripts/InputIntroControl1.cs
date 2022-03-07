@@ -15,7 +15,7 @@ public class InputIntroControl1 : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
                 if (!hasPlayedAudio)
                 {
-                    GetComponent<AudioSource>().PlayOneShot(iceCreamClip);
+                    //GetComponent<AudioSource>().PlayOneShot(iceCreamClip);
                     hasPlayedAudio = true;
                 }
             }

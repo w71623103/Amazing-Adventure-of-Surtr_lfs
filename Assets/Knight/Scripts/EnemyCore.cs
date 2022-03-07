@@ -49,6 +49,7 @@ public class EnemyCore : MonoBehaviour
         model.isAttackAHash = Animator.StringToHash("isAttackA");
         model.isDeadHash = Animator.StringToHash("isDead");
         model.isMovingHash = Animator.StringToHash("isMoving");
+        model.isAttackStartHash = Animator.StringToHash("isAttackStart");
 
         model.characterRB = GetComponent<Rigidbody2D>();
     }
@@ -56,6 +57,12 @@ public class EnemyCore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(model.enemyMode == EnemyModel.EnemyMode.boss)
+        {
+            GameObject pl = GameObject.FindGameObjectWithTag("Player");
+            if (pl != null) model.direction = (int) Mathf.Sign(pl.transform.position.x - transform.position.x);
+        }
+
         if (model.generalState == model.gStateDead) model.horizontalMovement = 0f;
         model.attackCondition = (model.generalState == model.gStateDefault && controller.isInSight(this));
 
@@ -97,20 +104,26 @@ public class EnemyCore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "movLimit")
+        if(model.enemyMode == EnemyModel.EnemyMode.patrol)
         {
-            model.direction *= -1;
+            if (collision.gameObject.tag == "movLimit")
+            {
+                model.direction *= -1;
+            }
         }
+        
     }
 
-    public void takeDamage(float dmg, float x)
+    public bool takeDamage(float dmg, float x)
     {
         if (model.hp - dmg >= 0) model.hp -= dmg;
         else model.hp = 0;
         model.characterRB.velocity = Vector2.zero;
         model.characterRB.AddForce(new Vector2(Mathf.Sign(transform.position.x - x), 1) * model.hitForce, ForceMode2D.Impulse);
-        if(model.generalState == model.gStateDefault) ChangeGeneralState(model.gStateDamage1);
+        if(model.generalState == model.gStateDefault && model.attackState != model.atkStateStart) ChangeGeneralState(model.gStateDamage1);
         if (x > transform.position.x) model.direction = 1;
         else model.direction = -1;
+
+        return model.hp <= 0;
     }
 }

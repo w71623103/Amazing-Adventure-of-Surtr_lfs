@@ -385,6 +385,7 @@ MonoBehaviour:
     attackSoundCD: 5
     damageSound: {fileID: 8300000, guid: 74eb21271b015f1439446fdfc5b98a2c, type: 3}
     hitSound: {fileID: 8300000, guid: ac9c719ca6556c347868a04ba85b2d8f, type: 3}
+    dashDistance: 0.7
 --- !u!212 &6812020497732847913
 SpriteRenderer:
   m_ObjectHideFlags: 0

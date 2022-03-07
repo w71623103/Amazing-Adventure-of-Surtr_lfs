@@ -79,4 +79,6 @@ public class PlayerModel
     public AudioClip damageSound;
     //public AudioClip jumpSound;
     public AudioClip hitSound;
+
+    public float dashDistance = 0.7f;
 }

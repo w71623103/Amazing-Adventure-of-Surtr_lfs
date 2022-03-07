@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class EnemyModel
 {
+    public enum EnemyMode { patrol, boss};
+    public EnemyMode enemyMode = EnemyMode.patrol;
     public float hp;
     public float maxhp;
 
@@ -19,12 +21,14 @@ public class EnemyModel
     public EnemyAttackStateBase attackState;
     public EAStateA atkStateA = new EAStateA();
     public EAStateCD atkStateCD = new EAStateCD();
+    public EAStateStart atkStateStart = new EAStateStart();
     public EAStateDefault atkStateDefault = new EAStateDefault();
 
     public Animator enemyAnim;
     public bool attackAanim = false;
     public int isMovingHash;
     public int isAttackAHash;
+    public int isAttackStartHash;
     public int isDeadHash;
 
     public EnemyGeneralStateBase generalState;

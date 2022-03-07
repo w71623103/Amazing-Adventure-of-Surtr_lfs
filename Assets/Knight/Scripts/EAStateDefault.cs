@@ -14,7 +14,7 @@ public class EAStateDefault : EnemyAttackStateBase
     {
         if (em.model.attackCondition)
         {
-            em.ChangeAttackState(em.model.atkStateA);
+            em.ChangeAttackState(em.model.atkStateStart);
 
         }
     }

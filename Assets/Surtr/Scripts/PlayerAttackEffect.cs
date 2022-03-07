@@ -26,7 +26,11 @@ public class PlayerAttackEffect : MonoBehaviour
         {
             //isHitting = true;
             Debug.Log(atk + "damage");
-            collision.gameObject.GetComponent<EnemyCore>().takeDamage(atk, transform.position.x);
+            if(collision.gameObject.GetComponent<EnemyCore>().takeDamage(atk, transform.position.x))
+            {
+                if(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCore>().model.healNum <= 2)
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCore>().model.healNum++;
+            }
         }
     }
 

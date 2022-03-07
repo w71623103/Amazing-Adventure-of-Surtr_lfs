@@ -9,6 +9,7 @@ TagManager:
   - passPlatform
   - collectable
   - movLimit
+  - bossUI
   layers:
   - Default
   - TransparentFX

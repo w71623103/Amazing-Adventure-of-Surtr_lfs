@@ -481,7 +481,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226420497}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1efd2f6d29736964cbd1fe710ea67e56, type: 3}
@@ -1407,7 +1407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689078749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.73, y: 1.86, z: -3}
+  m_LocalPosition: {x: -2.73, y: 1.86, z: -0.21}
   m_LocalScale: {x: 1.2469914, y: 1.2469914, z: 1.2469914}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2972,7 +2972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252121704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.8321, y: 1.8658, z: 0}
+  m_LocalPosition: {x: 7.42, y: 1.85, z: 0}
   m_LocalScale: {x: 3.4843, y: 3.206369, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3458,6 +3458,10 @@ PrefabInstance:
     - target: {fileID: 1826802149479978433, guid: 193b24669470a904da2b1ddb54305ba2, type: 3}
       propertyPath: model.atkStateCD.maxFrameNum
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826802149479978433, guid: 193b24669470a904da2b1ddb54305ba2, type: 3}
+      propertyPath: model.atkStateStart.maxFrameNum
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1826802149479978446, guid: 193b24669470a904da2b1ddb54305ba2, type: 3}
       propertyPath: m_Name
