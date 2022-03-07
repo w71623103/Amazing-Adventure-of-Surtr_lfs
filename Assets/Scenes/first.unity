@@ -234,7 +234,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09981099, y: -0.40963808}
+  m_Offset: {x: -0.26855332, y: -0.40963808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -245,7 +245,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9853327, y: 0.759208}
+  m_Size: {x: 1.2486042, y: 0.759208}
   m_EdgeRadius: 0
 --- !u!212 &70961218
 SpriteRenderer:
@@ -381,7 +381,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2, y: -0.88}
+  m_Offset: {x: -0.48464575, y: -0.8800001}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -392,7 +392,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9600576, y: 2.5383615}
+  m_Size: {x: 0.90982586, y: 2.5383615}
   m_EdgeRadius: 0
 --- !u!212 &226420500
 SpriteRenderer:
@@ -1250,7 +1250,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30999994, y: -1.3187073}
+  m_Offset: {x: 0.41883445, y: -1.3187073}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1261,7 +1261,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1714349, y: 1.2919495}
+  m_Size: {x: 2.9537659, y: 1.2919495}
   m_EdgeRadius: 0
 --- !u!212 &660207192
 SpriteRenderer:
@@ -4329,7 +4329,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.65, y: -1.57}
+  m_Offset: {x: -0.061612725, y: -1.57}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4340,7 +4340,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1714349, y: 1.794535}
+  m_Size: {x: 1.3463557, y: 1.7945349}
   m_EdgeRadius: 0
 --- !u!212 &1941144431
 SpriteRenderer:
