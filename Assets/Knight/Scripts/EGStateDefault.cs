@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//if hp less than 0, the enemy is dead, make sure it ends the attacking action
 public class EGStateDefault : EnemyGeneralStateBase
 {
     public override void EnterState(EnemyCore em) 

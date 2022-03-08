@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Default state of attacking, detect if attacking condition is meet or not.
 [System.Serializable]
 public class EAStateDefault : EnemyAttackStateBase
 {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//template for dash states
 public abstract class PlayerDashStateBase
 {
     public abstract void EnterState(PlayerCore pl);

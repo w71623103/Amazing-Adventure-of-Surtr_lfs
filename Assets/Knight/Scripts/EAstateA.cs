@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Attack State A for enemies, attack state A is the state that attack fx and effects will apply to the scene
 [System.Serializable]
 public class EAStateA : EnemyAttackStateBase
 {
@@ -26,9 +27,6 @@ public class EAStateA : EnemyAttackStateBase
         {
             em.ChangeAttackState(em.model.atkStateCD);
         }
-
-        //Change hit box according to frameCount;
-        //Debug.Log("attackA Behavior");
         //=======================================
 
         frameCounter -= Time.deltaTime;

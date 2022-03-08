@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//move to next scene if reached end of scene
 public class moveToNextScene : MonoBehaviour
 {
     [SerializeField] private string nextSceneName;

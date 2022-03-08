@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//contains variables of enemy
 [System.Serializable]
 public class EnemyModel
 {

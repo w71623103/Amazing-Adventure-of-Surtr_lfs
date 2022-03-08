@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//show the hp bar for nomal enemies
 public class EHpBar : MonoBehaviour
 {
     [SerializeField] private GameObject show;

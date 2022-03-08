@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//logics of player
 public class PlayerController
 {
     public PlayerModel model;
@@ -40,12 +41,6 @@ public class PlayerController
                 
                 model.characterRB.AddForce(new Vector2(0, model.jumpSpeed), ForceMode2D.Impulse); //jump
             }
-            /*else if (Input.GetKey(KeyCode.K) && model.isGrounded && Input.GetKey(KeyCode.S)) //on the ground and get the input
-            {
-                model.jumpTimer = model.jumpCD * 0.1f; //reset timer with a very minimum time
-
-                model.playerRB.AddForce(new Vector2(0, model.jumpSpeed * 0.3f), ForceMode2D.Impulse); //jump with a very small force
-            }*/
         }
 
     }

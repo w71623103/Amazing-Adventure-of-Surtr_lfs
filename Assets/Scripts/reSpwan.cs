@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//handle respawning
 public class reSpwan : MonoBehaviour
 {
     private GameObject player;

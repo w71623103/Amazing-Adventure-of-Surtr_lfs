@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//The core script for enemies, contains FSM control, visualization of animations, and monobehavior operations
 public class EnemyCore : MonoBehaviour 
 {
     public EnemyModel model = new EnemyModel();

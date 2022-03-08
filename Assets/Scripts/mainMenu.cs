@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//load the scenes, start the game
 public class mainMenu : MonoBehaviour
 {
     [SerializeField] private string sceneName;

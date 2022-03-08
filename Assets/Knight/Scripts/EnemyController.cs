@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//enemy controller, contains logic
 public class EnemyController
 {
     public EnemyModel model;
@@ -23,11 +24,13 @@ public class EnemyController
         }
     }
 
+    //apply the velocity according to the conditions
     public void hMovement()
     {
         model.characterRB.velocity = new Vector2(model.horizontalMovement, model.characterRB.velocity.y);
     }
 
+    //detect if player is within the attacking range of the enemy, if so, make an attack
     public bool isInSight(EnemyCore em)
     {
         RaycastHit2D hit = Physics2D.Raycast(new Vector3(em.transform.position.x, em.transform.position.y - 0.1f - model.attacRayHeightModifier, em.transform.position.z), new Vector2(em.transform.localScale.x, 0), model.attackRange, LayerMask.GetMask("Player"));

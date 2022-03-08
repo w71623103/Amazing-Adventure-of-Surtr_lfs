@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//in damage1 the color is changed to red, now change it back to normal
 [System.Serializable]
 public class EGStateDamage2 : EnemyGeneralStateBase
 {
@@ -20,9 +21,6 @@ public class EGStateDamage2 : EnemyGeneralStateBase
         {
             em.ChangeGeneralState(em.model.gStateDefault);
         }
-
-        //Change hit box according to frameCount;
-        //Debug.Log("attackA Behavior");
         //=======================================
 
         frameCounter += Time.deltaTime;

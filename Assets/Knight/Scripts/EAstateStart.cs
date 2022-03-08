@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This state shows that the enemy is attacking, giving some hints to the player that some reactions should be taken place.
 [System.Serializable]
 public class EAStateStart : EnemyAttackStateBase
 {
@@ -23,8 +24,6 @@ public class EAStateStart : EnemyAttackStateBase
             em.ChangeAttackState(em.model.atkStateA);
         }
 
-        //Change hit box according to frameCount;
-        //Debug.Log("attackA Behavior");
         //=======================================
 
         frameCounter += Time.deltaTime;

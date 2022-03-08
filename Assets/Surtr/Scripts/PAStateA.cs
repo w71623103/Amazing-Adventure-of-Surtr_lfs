@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//the first attacking action in the combo
 [System.Serializable]
 public class PAStateA : PlayerAttackStateBase
 {
@@ -12,6 +13,7 @@ public class PAStateA : PlayerAttackStateBase
     [SerializeField] private GameObject pos;
     private GameObject newAttack;
 
+    //play audio and animation, instantiate the attack effect object
     public override void EnterState(PlayerCore pl)
     {
         pl.GetComponent<AudioSource>().PlayOneShot(pl.model.hitSound);
@@ -19,11 +21,11 @@ public class PAStateA : PlayerAttackStateBase
         hasCombo = false;
         pl.model.attackAanim = true;
         pl.model.playerAnim.SetBool(pl.model.isAttackAHash, pl.model.attackAanim);
-        //attackA.SetActive(true);
         newAttack = GameObject.Instantiate(attackA,pos.transform.position,Quaternion.identity);
         newAttack.transform.localScale = new Vector3(pl.transform.localScale.x * newAttack.transform.localScale.x, newAttack.transform.localScale.y, newAttack.transform.localScale.z);
     }
 
+    //if key is pressed during the attack A, change state to the second combo (attackB), otherwise change to a transition state that allows a short time to continue the combo
     public override void Update(PlayerCore pl)
     {
         if(pl.model.attackInput && pl.model.inventory["combo"]) hasCombo = true;
@@ -33,9 +35,6 @@ public class PAStateA : PlayerAttackStateBase
             if (hasCombo) pl.ChangeAttackState(pl.model.atkStateB);
             else pl.ChangeAttackState(pl.model.atkStateT);
         }
-
-        //Change hit box according to frameCount;
-        //Debug.Log("attackA Behavior");
         //=======================================
 
         frameCounter -= Time.deltaTime;
@@ -56,7 +55,6 @@ public class PAStateA : PlayerAttackStateBase
             pl.model.attackSoundExclude[dice] = true;
             pl.model.soundPlayer.PlayOneShot(pl.model.atkSounds[dice]);
         }
-        //attackA.SetActive(false);
         MonoBehaviour.Destroy(newAttack);
         pl.model.comboCount = 1;
         pl.model.attackAanim = false;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//if the boss is defeated, change to the credit scene
 public class SwitchToCredit : MonoBehaviour
 {
     // Start is called before the first frame update

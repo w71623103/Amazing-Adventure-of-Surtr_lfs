@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script enables the exit game operation after the credit scene shows for at least 3 seconds.
 public class quitGame : MonoBehaviour
 {
     private float timer = 0f;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//deactivate this object if dead
 [System.Serializable]
 public class EGStateDead : EnemyGeneralStateBase
 {
@@ -21,12 +22,9 @@ public class EGStateDead : EnemyGeneralStateBase
         em.model.characterRB.velocity = Vector2.zero;
         if (frameCounter <= 0f)
         {
-            /*MonoBehaviour.Destroy(em.gameObject);*/
             em.gameObject.SetActive(false);
         }
 
-        //Change hit box according to frameCount;
-        //Debug.Log("attackA Behavior");
         //=======================================
 
         frameCounter -= Time.deltaTime;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//when hit, quickly change the color of player to red
 [System.Serializable]
 public class PGStateDamage1 : PlayerGeneralStateBase
 {

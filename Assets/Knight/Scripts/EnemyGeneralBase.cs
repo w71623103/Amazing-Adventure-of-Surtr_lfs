@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//general state contains default, damage1, damage2, dead
 [System.Serializable]
 public abstract class EnemyGeneralStateBase
 {

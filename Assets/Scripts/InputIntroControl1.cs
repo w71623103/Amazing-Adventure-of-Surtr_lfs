@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//show the input intro text, special for the heal text, because it need to find if the player has the healing item
 public class InputIntroControl1 : MonoBehaviour
 {
     private bool hasPlayedAudio = false;
@@ -15,7 +16,6 @@ public class InputIntroControl1 : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
                 if (!hasPlayedAudio)
                 {
-                    //GetComponent<AudioSource>().PlayOneShot(iceCreamClip);
                     hasPlayedAudio = true;
                 }
             }

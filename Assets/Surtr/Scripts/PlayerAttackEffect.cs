@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//damage enemy if hit
 public class PlayerAttackEffect : MonoBehaviour
 {
     [SerializeField] private float atk = 1;
@@ -21,11 +21,8 @@ public class PlayerAttackEffect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*Debug.Log("1");*/
         if (collision.gameObject.tag == "Enemy")
         {
-            //isHitting = true;
-            Debug.Log(atk + "damage");
             if(collision.gameObject.GetComponent<EnemyCore>().takeDamage(atk, transform.position.x))
             {
                 if(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCore>().model.healNum <= 2)

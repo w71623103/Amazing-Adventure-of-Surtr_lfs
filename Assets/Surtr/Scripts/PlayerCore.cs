@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//The core script for player, contains FSM control, visualization of animations, and monobehavior operations
 public class PlayerCore : MonoBehaviour 
 {
     public PlayerModel model = new PlayerModel();
@@ -53,18 +54,6 @@ public class PlayerCore : MonoBehaviour
         }
     }
 
-/*    private void Awake()
-    {
-        string sceneName = SceneManager.GetActiveScene().name;
-        switch (sceneName)
-        {
-            case "second":
-                transform.position = new Vector3(1.15999997f, 0.213f, 0);
-                break;
-        }
-    }*/
-
-    // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -109,9 +98,10 @@ public class PlayerCore : MonoBehaviour
                 model.attackSoundExclude[i] = false;
             }
         }
-
+        
+        //update the general state
         model.generalState.Update(this);
-        if (model.generalState != model.gStateDead)
+        if (model.generalState != model.gStateDead) //if i'm not dead, run all the logics
         {
             //Timers========================================
             model.jumpTimer -= Time.deltaTime;
@@ -131,7 +121,8 @@ public class PlayerCore : MonoBehaviour
             {
                 controller.collectItem(this);
             }
-
+            
+            //keypressed, not dashing, not attacking -> can heal
             if (Input.GetKeyDown(KeyCode.R) && model.dashState == model.dStateDefault && model.attackState == model.atkStateDefault)
             {
                 controller.heal(this);
@@ -171,16 +162,15 @@ public class PlayerCore : MonoBehaviour
     {
         controller.hMovement();
         controller.Jump();
-        //model.isDashing = controller.Dash();
-        
-
     }
 
+    //function supporting HP bar UI
     public float getHpPer()
     {
         return model.hp <= 0? 0.001f : model.hp / model.maxhp;
     }
 
+    //take damage, switch general state
     public void takeDamage(float dmg, float x)
     {
         if (model.hp - dmg >= 0) model.hp -= dmg;

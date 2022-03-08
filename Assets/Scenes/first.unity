@@ -1806,6 +1806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PassPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5087486097159873889, guid: 2d40ddad92a31f0418e42d888cfd11ca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7261826995779438800, guid: 2d40ddad92a31f0418e42d888cfd11ca, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3580,23 +3584,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1515272248 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4754129419798906282, guid: 2d40ddad92a31f0418e42d888cfd11ca, type: 3}
-  m_PrefabInstance: {fileID: 754831642}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1515272252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515272248}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 582dee3386afbae47aedf78b7971de12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1518128544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4968,10 +4955,6 @@ PrefabInstance:
     - target: {fileID: 4754129420359227711, guid: 2d40ddad92a31f0418e42d888cfd11ca, type: 3}
       propertyPath: m_Name
       value: PassPlatform (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7261826995779438800, guid: 2d40ddad92a31f0418e42d888cfd11ca, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d40ddad92a31f0418e42d888cfd11ca, type: 3}

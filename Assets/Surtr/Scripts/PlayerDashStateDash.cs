@@ -6,21 +6,18 @@ public class PlayerDashStateDash : PlayerDashStateBase
 {
     [SerializeField] private float frameCounter;
     [SerializeField] private float maxFrameNum = 0.417f;
-    //[SerializeField] private GameObject dashTargetPos;
     private Vector3 targetPosVect;
 
+    //set the target dash position, disenable the hitbox, start animation
     public override void EnterState(PlayerCore pl)
     {
         frameCounter = 0f;
         targetPosVect = new Vector3(pl.transform.position.x + pl.transform.localScale.x * pl.model.dashDistance, pl.transform.position.y, pl.transform.position.z);
-        //pl.model.isVulnerable = false;
         pl.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        //pl.model.playerRB.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-        /*pl.model.playerRB.constraints = RigidbodyConstraints2D.FreezeRotation;*/
         pl.model.playerAnim.SetBool(pl.model.isDashHash, true);
-        //pl.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(pl.model.dashSpeed * pl.gameObject.transform.localScale.x, 0), ForceMode2D.Impulse);
-        //pl.transform.Find("don't want to crash").GetComponent<BoxCollider2D>().enabled = true;
     }
+
+    //detect if dash position is valid, lerp the player position
     public override void Update(PlayerCore pl)
     {
         frameCounter += Time.deltaTime;
@@ -32,13 +29,11 @@ public class PlayerDashStateDash : PlayerDashStateBase
             pl.ChangeDashState(pl.model.dStateDefault);
         }
     }
+
+    //re-enable the hitbox, exit animation
     public override void LeaveState(PlayerCore pl)
     {
-        //pl.transform.Find("don't want to crash").GetComponent<BoxCollider2D>().enabled = false;
-        //pl.model.isVulnerable = true;
         pl.gameObject.GetComponent<BoxCollider2D>().enabled = true;
         pl.model.playerAnim.SetBool(pl.model.isDashHash, false);
-        //pl.model.playerRB.constraints = RigidbodyConstraints2D.None;
-        //pl.model.playerRB.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+//initialize cinemachine and player start position
 public class initializer : MonoBehaviour
 {
     [SerializeField] private GameObject cm;

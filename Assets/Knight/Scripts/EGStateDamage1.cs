@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//when damaged, this state will change the color of the enemy to red quickly, and in the next damage state will change it back
 [System.Serializable]
 public class EGStateDamage1 : EnemyGeneralStateBase
 {
@@ -20,9 +21,6 @@ public class EGStateDamage1 : EnemyGeneralStateBase
         {
             em.ChangeGeneralState(em.model.gStateDamage2);
         }
-
-        //Change hit box according to frameCount;
-        //Debug.Log("attackA Behavior");
         //=======================================
 
         frameCounter += Time.deltaTime;
